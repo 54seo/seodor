@@ -1,0 +1,8 @@
+#header {
+    background-image: url(http://dorcontrol.site/public/view/templates/Casino_2/img/gaming.jpg);
+    background-size: cover;
+}
+#main_text {
+    text-shadow: 10px 10px 10px black, 0 0 1em rgb(0, 0, 0);
+    padding: 10px;
+}

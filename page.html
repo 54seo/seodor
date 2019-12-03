@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/1801f6ee89.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css" />
+    <link rel="stylesheet" href="{{@S_TEMPL}}/css/slyle.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{@L_TITLE}} »
+            Feed" href="{{@S_RSS_URL}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta_keywords />
+    <meta_description />
+    <title>{{@L_BQUERY}} | {{@L_TITLE}}</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main
+            navigation">
+            <div class="navbar-brand">
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-end">
+                <div class="navbar-start">
+                    <a class="navbar-item is-uppercase has-text-weight-bold" href="{{@S_DOR_URL}}">
+                        Home
+                    </a>
+
+                    <a class="navbar-item is-uppercase has-text-weight-bold" href="#">
+                        Help
+                    </a>
+
+                    <a class="navbar-item is-uppercase has-text-weight-bold" href="#">
+                        About
+                    </a>
+
+                    <a class="navbar-item is-uppercase has-text-weight-bold" href="#">
+                        News
+                    </a>
+
+                    <a class="navbar-item is-uppercase has-text-weight-bold" href="{{@S_SITEMAP_URL}}">
+                        Sitemap
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="section"></div>
+
+        <div class="section" id="header">
+            <div class="section"></div>
+            <div class="content">
+                <div class="columns is-vcentered is-centered">
+                    <h1 class="is-size-2 has-text-centered has-text-info
+                        has-text-weight-bold is-large" id="main_text">
+                        {{@L_BKEY()}}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section"></div>
+
+        <div class="container">
+
+
+            <div class="columns">
+                <div class="column">
+
+                    <aside class="menu">
+                        <p class="menu-label">
+                            General
+                        </p>
+                        <ul class="menu-list">
+                            <l_repeat count="7,9">
+                            <li>{{@L_RELATED_MAP_BHREF()}}</li>
+                            </l_repeat>
+                            
+                        </ul>
+                    </aside>
+                    <hr width="100%" />
+                    <div>
+                        <figure>
+                                <img src="{URL_POSTER}{{@Q_IMAGES_URL_SMALL()}}{/URL_POSTER}">
+                        </figure>
+                    </div>
+                </div>
+                <div class="column is-10">
+                    <header>
+                        <h1 class="is-size-2 has-text-centered has-text-black
+                                has-text-weight-bold is-large">{{@L_BQUERY}}</h1>
+                        <h2 class="has-text-centered is-size-7">{{@L_DATE_TIME('d.m.Y, H:i', -5)}}.
+                            {{@S_PAGE_CAT_HREF|raw}}. {{@L_MAP_HREF()}}</h2>
+                    </header>
+                    <hr width="100%" />
+                    <h3 class="is-size-4 has-text-centered has-text-black
+                                has-text-weight-bold is-large">{{@SNIPP_TITLE()}}</h3>
+                    <hr width="100%" />
+
+
+
+                    <article class="has-text-justified">
+                        <p>
+                            {{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}{{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}
+                        </p>
+                        <p>
+                            <div class="section">
+                                <figure class="image is-4by3">
+                                    <img src="{URL_POSTER}{{@Q_IMAGES_URL_SMALL()}}{/URL_POSTER}"
+                                        alt="{{ @SNIPP_TITLE() }}" />
+                                </figure>
+                            </div>
+                        </p>
+                        <p>
+                            {{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}{{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}
+                        </p>
+                        <p>
+                            {{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}{{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}
+                        </p>
+                        <div class="section">
+                            <div class="container is-centered has-text-centered">
+                                {{@Q_VIDEO_EMBED()}}
+                            </div>
+                        </div>
+                        <p>
+                            <{{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}{{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}
+                                </p> <p>
+                                {{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}{{@SNIPP_DESCRIPTION()}}{{@DONOR_CONTENT()}}{{@SNIPP_TITLE()}}{{@SNIPP_DESCRIPTION()}}
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <hr width="100%" />
+
+        <!-- Coments -->
+
+        <div class="header">
+            <h2 class="is-size-4 has-text-weight-semibold has-text-left is-uppercase">One thought on “{{@L_BQUERY}}”
+            </h2>
+        </div>
+        <hr width="100%" />
+        <l_repeat count="2,5">
+            <div class="box">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="{{@Q_IMAGES_URL_SMALL()}}" alt="{{@L_RELATED_MAP_BKEY()}}">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <a href="{{@L_MAP_URL()}}"></a><strong>{{@L_GEN_NIK()}}</strong></a>
+                                <small>says:</small> <small>{{@L_DATE_TIME('d.m.Y, H:i', +5)}}. <a
+                                        href="{{@L_MAP_URL()}}">Edit</a></small>
+                                <br>
+                                <insert_to_text insert="map" count="1,3" tags="strong,u,i">
+                                    {{@SNIPP_DESCRIPTION(' ',3,5)}}</insert_to_text>
+                            </p>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a href="{{@L_MAP_URL()}}" class="level-item" aria-label="reply">
+                                    <span class="icon is-small">
+                                        <i class="material-icons"> replay </i>
+
+                                    </span>
+                                </a>
+                                <a href="{{@L_MAP_URL()}}" class="level-item" aria-label="reply">
+                                    <span class="icon is-small">
+
+                                        <i class="material-icons">
+                                            comment
+                                        </i>
+
+                                    </span>
+                                </a>
+                                <a href="{{@L_MAP_URL()}}" class="level-item" aria-label="retweet">
+                                    <span class="icon is-small">
+                                        <i class="material-icons">
+                                            turned_in
+                                        </i>
+                                    </span>
+                                </a>
+                                <a href="{{@L_MAP_URL()}}" class="level-item" aria-label="like">
+                                    <span class="icon is-small">
+                                        <i class="material-icons">
+                                            sentiment_satisfied
+                                        </i>
+                                    </span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+
+                </article>
+            </div>
+        </l_repeat>
+
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css" />
+        <link rel="alternate" type="application/rss+xml" title="{{@L_TITLE}} »
+            Feed" href="{{@S_RSS_URL}}">
+        <link rel="stylesheet" href="{{@S_TEMPL}}/css/slyle.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta_keywords />
+        <meta_description />
+        <title>{{@L_BQUERY}} | {{@L_TITLE}}</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar is-fixed-top" role="navigation" aria-label="main
+                navigation">
+                <div class="navbar-brand">
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-end">
+                    <div class="navbar-start">
+                        <a class="navbar-item is-uppercase has-text-weight-bold"
+                            href="{{@S_DOR_URL}}">
+                            Home
+                        </a>
+
+                        <a class="navbar-item is-uppercase has-text-weight-bold"
+                            href="#">
+                            Help
+                        </a>
+
+                        <a class="navbar-item is-uppercase has-text-weight-bold"
+                            href="#">
+                            About
+                        </a>
+
+                        <a class="navbar-item is-uppercase has-text-weight-bold"
+                            href="#">
+                            News
+                        </a>
+
+                        <a class="navbar-item is-uppercase has-text-weight-bold"
+                            href="{{@S_SITEMAP_URL}}">
+                            Sitemap
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="section"></div>
+
+            <div class="section" id="header">
+                <div class="section"></div>
+                <div class="content">
+                    <div class="columns is-vcentered is-centered">
+                        <h1 class="is-size-2 has-text-centered has-text-info
+                            has-text-weight-bold is-large" id="main_text">
+                            {{@L_BKEY()}}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="columns">
+
+                    <div class="column">
+
+                        <div class="tile is-ancestor">
+                            <div class="tile is-vertical is-12">
+                                <div class="tile">
+                                    <div class="tile is-parent is-vertical">
+                                     
+                                        <get_news count='5' pagination='1' sort='date_desc' cached='1'>   
+                                        <article class="tile is-child">
+                                            <div class="card">
+                                                <p class="title  has-text-centered"><a href="{URL}" rel="bookmark">{BKEY}</a></p>
+                                                <p class="subtitle  has-text-centered">{{@L_RELATED_BKEY()}}</p>
+                                                <div class="card-image">
+                                                    <figure class="image is-4by3">
+                                                            <a href="{URL}"><img 
+                                                            src="{POSTER_URL}" 
+                                                            alt="{KEY}" title="{KEY}"></a>
+                                                    </figure>
+                                                </div>
+                                                <div class="card-content">
+
+
+                                                    <div class="content">
+                                                            {SHORT_NEWS}...
+                                                        <br>
+                                                        <time datetime="{DATE_CACHED('d.m.Y, H:i:s')}"></time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        </get_news>
+
+                                    </div>
+                                    <div class="tile is-parent is-vertical">
+                                        
+                                        <get_news count='5' pagination='1' sort='date_desc' cached='1'>   
+                                        <article class="tile is-child">
+                                            <div class="card">
+                                                <p class="title  has-text-centered"><a href="{URL}" rel="bookmark">{BKEY}</a></p>
+                                                <p class="subtitle  has-text-centered">{{@L_RELATED_BKEY()}}</p>
+                                                <div class="card-image">
+                                                    <figure class="image is-4by3">
+                                                            <a href="{URL}"><img 
+                                                            src="{POSTER_URL}" 
+                                                            alt="{KEY}" title="{KEY}"></a>
+                                                    </figure>
+                                                </div>
+                                                <div class="card-content">
+
+
+                                                    <div class="content">
+                                                            {SHORT_NEWS}...
+                                                        <br>
+                                                        <time datetime="{DATE_CACHED('d.m.Y, H:i:s')}"></time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        </get_news>
+
+                                    </div>
+
+                                    <div class="tile is-parent is-vertical">
+
+                                       <get_news count='5' pagination='1' sort='date_desc' cached='1'>   
+                                        <article class="tile is-child">
+                                            <div class="card">
+                                                <p class="title  has-text-centered"><a href="{URL}" rel="bookmark">{BKEY}</a></p>
+                                                <p class="subtitle  has-text-centered">{{@L_RELATED_BKEY()}}</p>
+                                                <div class="card-image">
+                                                    <figure class="image is-4by3">
+                                                            <a href="{URL}"><img 
+                                                            src="{POSTER_URL}" 
+                                                            alt="{KEY}" title="{KEY}"></a>
+                                                    </figure>
+                                                </div>
+                                                <div class="card-content">
+
+
+                                                    <div class="content">
+                                                            {SHORT_NEWS}...
+                                                        <br>
+                                                        <time datetime="{DATE_CACHED('d.m.Y, H:i:s')}"></time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        </get_news>
+
+                                        </div>
+    
+
+
+                            
+                                </div>
+
+
+                                <nav class="level">
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">Tweets</p>
+                                            <p class="title">3,456</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">Following</p>
+                                            <p class="title">123</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">Followers</p>
+                                            <p class="title">456K</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="heading">Likes</p>
+                                            <p class="title">789</p>
+                                        </div>
+                                    </div>
+                                </nav>
+
+
+                                <footer class="footer">
+                                    <div class="content has-text-centered">
+                                        <p>
+                                                Powered by <a href="{{@S_DOR_URL}}">{{@L_TITLE}}</a>
+                                        </p>
+                                    </div>
+                                </footer>
+                            </div>
+                        </body>
+
+                    </html>
